@@ -5,7 +5,7 @@
 docker-compose up -d
 go run main.go
 ```
-SIGNUP FUNCTION API CALL (POST REQUEST)
+- SIGNUP FUNCTION API CALL (POST REQUEST)
 http://localhost:8000/users/signup
 
 ```json
@@ -19,7 +19,7 @@ http://localhost:8000/users/signup
 ```
 Response :"Successfully Signed Up!!"
 
-LOGIN FUNCTION API CALL (POST REQUEST)
+- LOGIN FUNCTION API CALL (POST REQUEST)
 
 http://localhost:8000/users/login
 
@@ -49,7 +49,7 @@ response will be like this
     "orders": []
 }
 ```
-Admin add Product Function (POST REQUEST)
+- Admin add Product Function (POST REQUEST)
 
 http://localhost:8000/admin/addproduct
 
@@ -63,7 +63,7 @@ http://localhost:8000/admin/addproduct
 ```
 Response : "Successfully added our Product Admin!!"
 
-View all the Products in db GET REQUEST
+- View all the Products in db GET REQUEST
 
 http://localhost:8000/users/productview
 
@@ -94,7 +94,7 @@ Response
     }
 ]
 ```
-Search Product by regex function (GET REQUEST)
+- Search Product by regex function (GET REQUEST)
 defines the word search sorting http://localhost:8000/users/search?name=Le
 
 response:
@@ -110,21 +110,21 @@ response:
     }
 ]
 ```
-Adding the Products to the Cart (GET REQUEST)
+- Adding the Products to the Cart (GET REQUEST)
 
 http://localhost:8000/addtocart?id=xxxproduct_idxxx&userID=xxxxxxuser_idxxxxxx
 
 Corresponding MongoDB query
 
-Removing Item From the Cart (GET REQUEST)
+- Removing Item From the Cart (GET REQUEST)
 
 http://localhost:8000/addtocart?id=xxxxxxx&userID=xxxxxxxxxxxx
 
-Listing the item in the users' cart (GET REQUEST) and total price
+- Listing the item in the users' cart (GET REQUEST) and total price
 
 http://localhost:8000/listcart?id=xxxxxxuser_idxxxxxxxxxx
 
-Adding the Address (POST REQUEST)
+- Adding the Address (POST REQUEST)
 
 http://localhost:8000/addadress?id=user_id**\*\***\***\*\***
 
@@ -138,24 +138,26 @@ The Address array is limited to two values home and work address more than two a
   "pin_code": "777777"
 }
 ```
-Editing the Home Address(PUT REQUEST)
+- Editing the Home Address(PUT REQUEST)
 
 http://localhost:8000/edithomeaddress?id=xxxxxxxxxxuser_idxxxxxxxxxxxxxxx
 
-Editing the Work Address(PUT REQUEST)
+- Editing the Work Address(PUT REQUEST)
 
 http://localhost:8000/editworkaddress?id=xxxxxxxxxxuser_idxxxxxxxxxxxxxxx
 
-Delete Addresses(GET REQUEST)
+- Delete Addresses(GET REQUEST)
 
 http://localhost:8000/deleteaddresses?id=xxxxxxxxxuser_idxxxxxxxxxxxxx
 
 delete both addresses
 
-Cart Checkout Function and placing the order(GET REQUEST)
+- Cart Checkout Function and placing the order(GET REQUEST)
 
 After placing the order the items have to be deleted from cart functonality added
 
 http://localhost:8000?id=xxuser_idxxx
 
-Instantly Buying the Products(GET REQUEST) http://localhost:8000?userid=xxuser_idxxx&pid=xxxxproduct_idxxxx
+- Instantly Buying the Products(GET REQUEST)
+
+http://localhost:8000?userid=xxuser_idxxx&pid=xxxxproduct_idxxxx
